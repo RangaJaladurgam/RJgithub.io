@@ -39,7 +39,7 @@ body {
   height: 100vh;
   /* background-color: red; */
   /* background-color:rgb(245, 245, 245); */
-  background-image: url("/projects/tributepage-msd/images/homebanner.jpg");
+  background-image: url("images/homebanner.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
