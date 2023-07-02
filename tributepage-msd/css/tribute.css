@@ -39,11 +39,11 @@ body {
   height: 100vh;
   /* background-color: red; */
   /* background-color:rgb(245, 245, 245); */
-  background-image: url("/projects/tributepage-msd/homebanner.jpg");
+  background-image: url("homebanner.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
 }
 /* #home,
@@ -121,13 +121,13 @@ body {
 #fame .container-fluid {
   color: rgb(0, 0, 0);
   width: inherit;
-  height: 140vh;
+  height: 100vh;
   /* background-color: red; */
   background-color: rgb(207, 208, 204);
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  justify-content: start;
+  justify-content: center;
   align-items: start;
   overflow: hidden;
 }
@@ -274,7 +274,7 @@ body {
 #contact .container-fluid {
   color: rgb(0, 0, 0);
   width: inherit;
-  height: 70vh;
+  height: 100vh;
   /* background-color: red; */
   background-color: rgb(207, 208, 204);
   display: flex;
@@ -358,7 +358,7 @@ textarea {
 #contact marquee {
   font-family: "Kaushan Script", cursive;
   font-size: 70px;
-  width: 115%;
+  width: intial;
   height: 100px;
   background-color: rgb(250, 210, 10);
   display: flex;
@@ -382,16 +382,16 @@ textarea {
   justify-content: center;
   align-items: center;
 }
-.footer section .images .csk{
+.footer section .images .csk {
   mix-blend-mode: multiply;
 }
 
 @media all and (max-width: 768px) {
-  #home .container-fluid{
-    background-image: url('/projects/tributepage-msd/homebannermbl.jpg');
+  #home .container-fluid {
+    background-image: url("homebannermbl.jpg") !important;
   }
-  
-  #home .home-text{
+
+  #home .home-text {
     text-align: center;
   }
 
@@ -410,7 +410,7 @@ textarea {
     margin-top: 30px;
   }
   #fame .container-fluid {
-    min-height: 112rem;
+    height: 232vh;
   }
   #fame .container-fluid .container {
     display: grid;
@@ -467,6 +467,7 @@ textarea {
       "box2 box2"
       "box3 box3";
     gap: 20px;
+    place-items: center;
   }
   #contact .container .box1 {
     min-width: 10rem;
@@ -482,9 +483,17 @@ input[type="email"],
 textarea {
   max-width: 23rem;
 } */
-#contact .card{
-  width: 20rem;
-}
+  #contact .card {
+    display: flex;
+    max-width: 20rem;
+    align-items: center;
+    justify-content: center;
+    min-height: 19rem;
+  }
+  #contact .card .card-text {
+    width: 20rem;
+    height: 8rem;
+  }
   #contact .container .box2 .section form {
     /* background-color: red; */
     padding-inline: 30px;
