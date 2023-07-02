@@ -1,0 +1,110 @@
+*,
+*:before,
+*:after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background: #ccc;
+}
+.container {
+  background-color: rgb(0, 170, 255);
+  width: 80%;
+  min-width: 450px;
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 30px;
+  padding: 30px 40px;
+  border-radius: 10px;
+}
+#newtask {
+  position: relative;
+  background-color: #ffffff;
+  padding: 30px 20px;
+  border-radius: 5px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+#newtask input {
+  width: 70%;
+  height: 65px;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  font-size: 24px;
+  border: 2px solid #d1d3d4;
+  padding: 12px;
+  color: #111111;
+  font-weight: 500;
+  position: relative;
+  border-radius: 5px;
+}
+#newtask input:focus {
+  outline: none;
+  border-color: rgb(0, 170, 255);
+}
+
+input[type="text"] {
+  font-size: 30px;
+  padding: 0px 10px 0 10px;
+}
+#newtask button {
+  position: relative;
+  float: right;
+  width: 20%;
+  height: 65px;
+  border-radius: 5px;
+  font-size: 30px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  background-color: rgb(0, 170, 255);
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  outline: none;
+}
+#tasks {
+  text-transform: capitalize;
+  background-color: #ffffff;
+  padding: 30px 20px;
+  margin-top: 40px;
+  border-radius: 10px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  position: relative;
+}
+.task {
+  background-color: #ffffff;
+  height: 50px;
+  padding: 20px 10px;
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid #d1d3d4;
+  cursor: pointer;
+}
+.task span {
+  font-family: "Poppins", sans-serif;
+  font-size: 25px;
+  font-weight: 600;
+}
+.task button {
+  background-color: rgb(0, 170, 255);
+  color: #ffffff;
+  height: 100%;
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+.completed {
+  text-decoration: line-through;
+  color:rgb(0, 170, 255);;
+}
