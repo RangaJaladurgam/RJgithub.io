@@ -382,9 +382,9 @@ textarea {
   justify-content: center;
   align-items: center;
 }
-
-
-/* Responsiveness */
+.footer section .images .csk{
+  mix-blend-mode: multiply;
+}
 
 @media all and (max-width: 768px) {
   #home .container-fluid{
