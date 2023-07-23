@@ -80,7 +80,7 @@ body {
 #home .home-text h1 {
   font-family: "Philosopher", sans-serif;
   font-size: 5rem;
-  color: white;
+  color: black;
 }
 #home .home-text h1:hover {
   color: var(--bgcolor);
