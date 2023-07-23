@@ -58,7 +58,7 @@ body {
   align-items: center;
 }
 #home .container-fluid {
-  background-image: url("images/homebackground.jpg");
+  background-image: url("images/bgbannerlg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
@@ -634,7 +634,7 @@ footer {
   /* -----------------------------skills--------------------------------- */
   #skills .container-fluid {
     width: inherit;
-    height: 150vh;
+    height: 180vh;
     display: block;
   }
   #skills .container-fluid h1 {
