@@ -58,7 +58,7 @@ body {
   align-items: center;
 }
 #home .container-fluid {
-  background-image: url("images/bgbannerlg.jpg");
+  background-image: url("images/homebackground.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
