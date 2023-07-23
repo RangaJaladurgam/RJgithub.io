@@ -3,10 +3,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
 :root {
-  --bgcolor: #221a1a;
+  --bgcolor: rgb(34, 26, 26);
   --headcolor: rgb(134, 129, 125);
   --subheadcolor: rgb(214, 202, 176);
-  --customblue: #7903f4;
+  --customblue: rgb(121, 3, 244);
 }
 
 html,
