@@ -3,10 +3,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
 :root {
-  --bgcolor: rgb(0, 0, 0);
+  --bgcolor: #221a1a;
   --headcolor: rgb(134, 129, 125);
   --subheadcolor: rgb(214, 202, 176);
-  --customblue: rgb(121, 3, 244);
+  --customblue: #7903f4;
 }
 
 html,
@@ -34,7 +34,8 @@ body {
 }
 .navbar-collapse a,
 .a-con a {
-  font-family: "ubuntu", sans-serif;
+  text-transform: uppercase;
+  font-family: "poppins", sans-serif;
   font-weight: 500;
   color: white;
   transition: 1s;
@@ -79,15 +80,15 @@ body {
 #home .home-text h1 {
   font-family: "Philosopher", sans-serif;
   font-size: 5rem;
-  color: var(--customblue);
+  color: black;
 }
 #home .home-text h1:hover {
-  color: rgb(163, 7, 7);
+  color: var(--bgcolor);
 }
 #home .home-text p {
   font-family: "Poppins", sans-serif;
   text-align: center;
-  color: var(--customblue);
+  color: black;
 }
 /* --------------------Home Ends------------------ */
 /* --------------------About Starts------------------ */
@@ -171,16 +172,53 @@ body {
 #about .tab-contents.active-tab {
   display: block;
 }
+#about button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+  width: 8rem;
+  height: 2.5rem;
+  font-family: poppins, sans-serif;
+  font-size: 17px;
+  font-weight: 500;
+  background: #00659b;
+  color: white;
+  border: none;
+  border-radius: 5px 30px 30px 5px;
+  overflow: hidden;
+  transition: 1s;
+}
+#about button:hover {
+  background-color: #009b9b;
+  color: black;
+  transform: scale(1.09);
+  transition: 1s;
+  box-shadow: 0 3px 10px #00659b;
+}
+#about button i {
+  font-size: 20px;
+}
 /* ------------skills-------------- */
 
-#skills .container-fluid h1 {
-  visibility: hidden;
+#skills .container-fluid {
+  display: flex;
+  flex-direction: column;
+}
+#skills .container-fluid h1,
+#services .container-fluid h1 {
+  color: var(--customblue);
+  visibility: visible;
+  font-size: 4rem;
+  font-family: poppins, sans-serif;
+  text-align: center;
 }
 #skills .container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-areas: "col1 col2 col3 col4";
   /* gap: 20px; */
+  /* background-color: red; */
 }
 #skills .container .col-1 {
   grid-area: col1;
@@ -289,8 +327,9 @@ body {
   font-weight: 400;
   margin-top: 10px;
 }
-/* --------------portfolio---------------- */
-/* #portfolio .container-fluid {
+
+/* --------------services---------------- */
+#services .container-fluid {
   color: white;
   width: inherit;
   height: 100vh;
@@ -298,7 +337,71 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-} */
+}
+#services .container-fluid .container {
+  height: 60vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+#services .container-fluid .container .section1 {
+  width: 90%;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 50px 0px;
+}
+#services .container-fluid .container .section2 {
+  height: 60vh;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  justify-content: center;
+  align-items: center;
+}
+
+#services .container-fluid .container .section1 img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  transition: 1s;
+}
+#services .container-fluid .container .section1 img:hover {
+  transform: scale(1.19);
+  transition: 0.5s;
+}
+#services .container-fluid .box {
+  /* background-color: red; */
+  /* border: 1px inset var(--customblue); */
+  width: 400px;
+  height: 110px;
+  border-radius: 50px 0px;
+  margin-block: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--customblue);
+  transition: 2s;
+  cursor: pointer;
+}
+#services .container-fluid .box:hover {
+  box-shadow: 2px 5px 5px var(--customblue);
+  transform: translateX(-30px);
+  transition: 1s;
+  color: white;
+}
+#services .container-fluid .container i {
+  margin-right: 20px;
+  color: var(--customblue);
+}
+
+/* --------------portfolio---------------- */
+#portfolio .container-fluid {
+  background-color: var(--customblue);
+}
 #portfolio .container {
   font-family: "Ubuntu", sans-serif;
   display: flex;
@@ -322,46 +425,30 @@ body {
     "box1 box1"
     "box2 box3";
 }
-#portfolio .container .col-2 .section-1 {
-  background: transparent;
-  border: 2px outset rgb(13, 14, 13);
-  border-bottom: 2px dotted rgb(13, 14, 13);
-  border-right: 2px dotted rgb(13, 14, 13);
-  grid-area: box1;
-  border-radius: 10px;
+#portfolio .container .col-2 .section-1,
+#portfolio .container .col-2 .section-2,
+#portfolio .container .col-2 .section-3 {
+  background-color: rgba(0, 0, 0, 0.178);
+  backdrop-filter: blur(3px);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border-radius: 10px;
   transition: transform 1.2s;
+}
+#portfolio .container .col-2 .section-1 {
+  grid-area: box1;
 }
 #portfolio .container .col-2 .section-2 {
-  background: transparent;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border-bottom: 2px dotted rgb(13, 14, 13);
-  border-left: 2px dotted rgb(13, 14, 13);
-  border-radius: 10px;
   grid-area: box2;
-  transition: transform 1.2s;
 }
 #portfolio .container .col-2 .section-3 {
-  background: transparent;
-  border: 2px inset rgb(13, 14, 13);
-  border-left: 2px dotted rgb(13, 14, 13);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border-radius: 10px;
   grid-area: box3;
-  transition: transform 1.2s;
 }
 #portfolio .container .col-1 h1 {
   /* background-color: red; */
-  color: var(--customblue);
+  color: black;
   font-size: 8rem;
 }
 #portfolio .container .col-1 p {
@@ -393,16 +480,19 @@ body {
   background-color: var(--customblue);
   transform: translateY(-16px);
   transition: transform 0.6s;
+  box-shadow: 0 0 30px rgb(58, 58, 58);
 }
 #portfolio .container .col-2 .section-2:hover {
   background-color: var(--customblue);
   transform: translateX(-16px);
   transition: transform 0.6s;
+  box-shadow: 0 0 30px rgb(58, 58, 58);
 }
 #portfolio .container .col-2 .section-3:hover {
   background-color: var(--customblue);
   transform: translateX(16px);
   transition: transform 0.6s;
+  box-shadow: 0 0 30px rgb(58, 58, 58);
 }
 #portfolio .container .col-2 i {
   color: rgb(214, 214, 214);
@@ -477,7 +567,7 @@ body {
   transform: scale(1.25);
   transition: 0.5s;
 }
-#contact .container-fluid .container .span{
+#contact .container-fluid .container .span {
   font-size: 1rem;
   color: green;
 }
@@ -494,12 +584,10 @@ footer {
     overflow: hidden;
   }
   #home .container-fluid {
-    background-image: url("images/bgbannersm.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: var(--customblue);
     display: flex;
     justify-content: space-around;
-    align-items: end;
+    align-items: center;
   }
   #home .home-text {
     /* background-color: red; */
@@ -516,6 +604,7 @@ footer {
   #home .home-text h1 {
     letter-spacing: 2px;
     font-size: 3rem;
+    color: black;
   }
   /* -----------------------------about----------------------- */
   #about .container-fluid {
@@ -523,7 +612,7 @@ footer {
     min-height: 200vh;
     display: flex;
   }
-  #abour .container-fluid .container {
+  #about .container-fluid .container {
     width: 100%;
     padding-inline: 0;
   }
@@ -538,10 +627,14 @@ footer {
     flex-grow: 2;
     margin: 0px;
   }
+  #about p {
+    text-align: left;
+    font-size: 1.3rem;
+  }
   /* -----------------------------skills--------------------------------- */
   #skills .container-fluid {
     width: inherit;
-    height: 270vh;
+    height: 150vh;
     display: block;
   }
   #skills .container-fluid h1 {
@@ -600,13 +693,36 @@ footer {
     transform: translateX(8px);
     transition: 0.5s;
   }
+  /* --------------------------------services----------------------------- */
+  #services .container-fluid {
+    width: inherit;
+    height: 160vh;
+  }
+  #services .container-fluid h1 {
+    color: var(--customblue);
+    visibility: visible;
+    font-size: 4rem;
+    font-family: poppins, sans-serif;
+    text-align: center;
+  }
+  #services .container-fluid .container {
+    display: block;
+  }
+  #services .container-fluid .container .section1 {
+    /* background-color: red; */
+    width: 100%;
+    height: 42vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   /* --------------------------------portfolio----------------------------- */
   #portfolio .container-fluid {
     width: inherit;
-    height: 100vh;
+    height: 130vh;
   }
   #portfolio .container-fluid .container {
-    min-height: 130vh;
+    min-height: 100vh;
     display: block;
   }
   #portfolio .container .col-1 {
