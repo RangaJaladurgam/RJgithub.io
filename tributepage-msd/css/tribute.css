@@ -1,54 +1,45 @@
-@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Marcellus&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=AR+One+Sans:wght@400;500;600&display=swap");
+:root {
+  --bgColor: #320073;
+  --secColor: #ff00a5;
+  --translateZ: 549px;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: white;
 }
 
 body {
+  background-color: var(--bgColor);
+  font-family: "AR One Sans", sans-serif;
+}
+.navbar {
+  font-family: "AR One Sans", sans-serif;
   font-weight: 500;
-  max-width: Clamp(100vh, 100%);
-  height: 100vh;
-  background-color: rgb(255, 255, 255);
+  background-color: transparent !important;
+  transition: all 0.3s ease-in-out;
+  color: black;
 }
-
-#navbar {
-  margin-left: auto;
+.nav-active {
+  background-color:var(--secColor) !important;
+  box-shadow: 5px -1px 12px -5px grey;
 }
-#navbar span {
-  margin: auto;
-}
-#navbar a,
-.a-con a {
-  font-family: "Libre Baskerville", serif;
-  font-weight: 500;
-  color: rgb(0, 0, 0);
-  transition: 0.32s;
-}
-#navbar a:hover,
-.a-con a:hover {
-  font-weight: 600;
-  color: rgb(11, 67, 234);
-  transform: scale(1.1);
-}
-/* navbar Ends */
-#home .container-fluid {
-  width: inherit;
-  height: 100vh;
-  /* background-color: red; */
-  /* background-color:rgb(245, 245, 245); */
+#home {
+  height: 100dvh;
+  /* background: red; */
   background-image: url("homebanner.jpg");
-  background-size: cover;
+  background-color: white;
+  background-size: contain;
+  background-position: center;
   background-repeat: no-repeat;
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
-/* #home,
-.home-text {
-} */
+
 #home .home-text h3,
 #home .home-text h4 {
   font-size: 45px;
@@ -70,164 +61,156 @@ body {
 }
 /* home Ends */
 /* bio */
-#bio .container-fluid {
-  color: rgb(0, 0, 0);
-  width: inherit;
-  height: 100vh;
-  /* background-color: red; */
-  background-color: rgb(207, 208, 204);
-  display: flex;
-  flex-direction: column;
+#bio {
+  min-height: 100vh;
+  background-color: var(--bgColor);
   flex-wrap: wrap;
-  justify-content: center;
-  align-items: start;
 }
-#bio .container-fluid .bioimg img {
-  width: 80%;
-  float: left;
-  margin-left: 100px;
-  border-radius: 10px 0px;
-  transition: 1s;
-}
-#bio .container-fluid .bioimg img:hover {
-  transform: scale(1.02);
-}
-#bio .container-fluid .row {
-  display: flex;
-  justify-content: center;
-  align-items: start;
-  /* background-color:red; */
-}
-#bio .container-fluid .biotext {
+#bio .bio-text {
   text-align: justify;
-  font-size: 15px;
-  text-indent: 80px;
-  transition-duration: 1s;
+  font-size: 14.4px;
+  font-weight: 500;
+  border: 1px dashed var(--secColor);
+  border-radius: 5px;
+  position: relative;
 }
-#bio .container-fluid h2 {
-  font-family: "Libre Baskerville", serif;
-
-  margin-left: 100px;
-  margin-bottom: 50px;
+#bio h4 {
+  color: var(--secColor);
 }
-#bio .biotext::first-letter {
-  font-size: 30px;
+#more {
+  display: none;
 }
-#bio .biotext:hover {
-  transform: translate(-5px, -10px);
+#myBtn {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-weight: 600;
+  color: var(--secColor);
+  border: 1px dashed var(--secColor);
 }
-/* bio ends */
+#myBtn:hover {
+  background-color: var(--secColor);
+  color: var(--bgColor);
+}
+/* ---------------------------bio ends ----------------------*/
 /* fame starts */
-#fame .container-fluid {
-  color: rgb(0, 0, 0);
-  width: inherit;
-  height: 120vh;
-  /* background-color: red; */
-  background-color: rgb(207, 208, 204);
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: start;
-  overflow: hidden;
+#fame {
+  min-height: 100vh;
+  gap: 1rem;
+  display: block;
 }
-#fame .container-fluid .container {
-  height: 90vh;
-  /* background-color: red; */
-  display: grid;
-  grid-template-columns: repeat(2, 5fr);
-  gap: 20px;
-  grid-template-areas:
-    "box1 box3"
-    "box1 box3"
-    "box2 box3"
-    "box2 box3";
+#fame .card {
+  max-width: 30rem;
+  background-color: white;
+  border: none;
+  background: rgb(5, 125, 192);
+  background: linear-gradient(
+    171deg,
+    rgb(244, 3, 128) 0%,
+    rgba(5, 125, 192, 1) 100%
+  );
 }
-#fame .container-fluid .container .section1 {
-  /* background-color: rgb(30, 255, 0); */
-  grid-area: box1;
-  margin-top: 15px;
-  overflow: hidden;
-  border-radius: 7px;
+#fame .card-2 {
+  max-width: 20rem;
+  background: rgb(5, 125, 192);
+  background: linear-gradient(
+    165deg,
+    rgba(5, 125, 192, 1) 0%,
+    rgb(244, 3, 128) 100%
+  );
+  color: white;
+  border: none;
+  transition: all 0.5s ease-in-out;
+  /* border: 1px dashed black; */
 }
-#fame .container-fluid .container .section2 {
-  /* background-color: rgb(0, 30, 255); */
-  grid-area: box2;
-  margin-bottom: 15px;
-  overflow: hidden;
-  border-radius: 7px;
+#fame .card-2:hover{
+  transform: rotateY(360deg);
+  transition: all 1s ease-in-out;
 }
-#fame .container-fluid .container .section3 {
-  /* background-color: rgb(255, 0, 225); */
-  grid-area: box3;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(4, 0.7fr);
-  gap: 10px;
-  margin-block: 15px;
-  margin-inline: 10px;
+
+#fame .card-img img,
+#fame .card-img1 img {
+  width: 100%;
+  aspect-ratio: 16/6;
+  object-fit: cover;
+  border-radius: 5px;
 }
-#fame .container .box {
-  padding: 5px;
-  background-color: rgb(255, 255, 255);
-  border-radius: 7px;
+#fame .card-img1 img {
+  aspect-ratio: 16/10;
+  -webkit-mask-image: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 1),
+    transparent 100%
+  );
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 1), transparent 100%);
+}
+#fame table {
+  width: 100%;
+}
+#fame table td,
+#fame table td b {
+  padding: 0.5rem;
+  font-size: 0.9rem;
+  color: white;
+}
+#fame table td div {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
-  transition-duration: 0.5s;
 }
-#fame .container .box img {
-  overflow: hidden;
-  width: 80%;
+#fame .stats h5,
+#fame .stats span {
+  color: rgb(255, 254, 254);
+  font-size: 0.6rem;
+}
+
+#fame .right-container,
+#fame .left-text {
+  border: 1px dashed var(--secColor);
+  border-radius: 5px;
+  gap: 1rem;
+}
+.content-headers {
+  color: var(--secColor);
+  font-style: italic;
+}
+#fame .card-2 .stats td {
+  color: white;
+}
+
+#glory {
+  min-height: 100vh;
+}
+#glory .section {
+  gap: 1rem;
+}
+#glory .section .box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px dashed var(--secColor);
+  border-radius: 5px;
+  padding: 1rem;
+  transition: all 1s ease-in-out;
+}
+#glory .section .box img {
+  max-width: 7rem;
   aspect-ratio: 1/1;
-  background-size: cover;
-  transition: 1s;
-  cursor: pointer;
+  object-fit: contain;
+  padding: 0.5rem;
 }
-#fame .container .box img:hover {
-  transform: scale(1.1);
+#glory .section .box-1 img,
+#glory .section .box-6 img,
+#glory .section .box-10 img,
+#glory .section .box-11 img,
+#glory .section .box-12 img {
+  object-fit: cover;
 }
-#fame .section1 img {
-  background-size: cover;
-}
-#fame .section2 {
-  display: flex;
-  justify-content: end;
-  align-items: center;
-}
-#fame .section2 video {
-  width: 150%;
-}
-#fame .section3 .box-3 img,
-#fame .section3 .box-8 img {
-  width: 60%;
-  height: 120px;
-}
-#fame .section3 .box-4 img,
-#fame .section3 .box-9 img {
-  width: 60%;
-  height: 120px;
-}
-#fame .section3 .box-5 img {
-  width: 30%;
-  height: 120px;
-}
-#fame .section3 .box-6 img,
-#fame .section3 .box-10 img,
-#fame .section3 .box-11 img,
-#fame .section3 .box-12 img {
-  width: 120%;
-  height: 120px;
-}
-#fame .section3 .box-7 img {
-  width: 40%;
-  height: 120px;
-}
-#fame .section3 .box-1:hover,
-#fame .section3 .box-5:hover,
-#fame .section3 .box-7:hover {
+#glory .section .box-1:hover,
+#glory .section .box-5:hover,
+#glory .section .box-7:hover {
   background: linear-gradient(
     95deg,
     rgba(255, 195, 88, 1) 0%,
@@ -235,8 +218,8 @@ body {
     rgba(153, 126, 16, 0.9976365546218487) 90%
   );
 }
-#fame .section3 .box-4:hover,
-#fame .section3 .box-9:hover {
+#glory .section .box-4:hover,
+#glory .section .box-9:hover {
   background: linear-gradient(
     130deg,
     rgba(88, 229, 255, 1) 0%,
@@ -244,11 +227,11 @@ body {
     rgba(16, 85, 153, 0.9976365546218487) 90%
   );
 }
-#fame .section3 .box-6:hover,
-#fame .section3 .box-2:hover,
-#fame .section3 .box-10:hover,
-#fame .section3 .box-11:hover,
-#fame .section3 .box-12:hover {
+#glory .section .box-6:hover,
+#glory .section .box-2:hover,
+#glory .section .box-10:hover,
+#glory .section .box-11:hover,
+#glory .section .box-12:hover {
   background: linear-gradient(
     130deg,
     rgba(147, 88, 255, 1) 0%,
@@ -256,8 +239,8 @@ body {
     rgba(127, 31, 222, 0.9976365546218487) 90%
   );
 }
-#fame .section3 .box-3:hover,
-#fame .section3 .box-8:hover {
+#glory .section .box-3:hover,
+#glory .section .box-8:hover {
   background: linear-gradient(
     130deg,
     rgba(96, 88, 255, 1) 0%,
@@ -265,105 +248,11 @@ body {
     rgba(222, 31, 153, 0.9976365546218487) 90%
   );
 }
-#fame .container .box:hover {
-  transform: scale(1.2);
-  border: 3px solid rgb(233, 181, 9);
+#glory .box:hover {
+  background-color: red;
+  transform: scale(1.05);
 }
 /* fame ends */
-/* contact */
-#contact .container-fluid {
-  color: rgb(0, 0, 0);
-  width: inherit;
-  height: 100vh;
-  /* background-color: red; */
-  background-color: rgb(207, 208, 204);
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
-#contact .container {
-  height: 50vh;
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-areas:
-    "box1 box1 box2 box2 box2"
-    "box1 box1 box2 box2 box2"
-    "box1 box1 box2 box2 box2"
-    "box3 box3 box3 box3 box3";
-}
-#contact .container .box1 {
-  /* background-color: red; */
-  grid-area: box1;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-#contact .container .box2 {
-  /* background-color: rgb(0, 34, 255); */
-  grid-area: box2;
-  display: flex;
-  flex-direction: column;
-  justify-content: end;
-  align-items: center;
-}
-#contact .container .box3 {
-  /* background-color: rgb(0, 34, 255); */
-  grid-area: box3;
-  display: flex;
-  flex-direction: column;
-  justify-content: end;
-  align-items: center;
-}
-/* 
-#contact .container .box2 .section {
-  width: 80rem;
-} */
-#contact .container .box2 .section form {
-  /* background-color: red; */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 20px;
-}
-#contact input[type="text"],
-input[type="email"],
-textarea {
-  width: 30rem;
-  height: 3rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  padding-left: 10px;
-}
-#contact .container .box2 .section form button {
-  width: 100px;
-  height: 40px;
-  border: none;
-  border-radius: 5px;
-  background-color: #0a8bf5;
-  font-size: 16px;
-  font-weight: 600;
-  margin: 10px 10px 10px 0;
-}
-#contact .box1 .card-body {
-  display: flex;
-  /* background-color: red; */
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-size: 20px;
-}
-#contact marquee {
-  font-family: "Kaushan Script", cursive;
-  font-size: 70px;
-  width: intial;
-  height: 100px;
-  background-color: rgb(250, 210, 10);
-  display: flex;
-  align-items: center;
-}
 .footer .center {
   display: flex;
   /* background-color: red; */
@@ -385,8 +274,24 @@ textarea {
 .footer section .images .csk {
   mix-blend-mode: multiply;
 }
-
-@media all and (max-width: 768px) {
+@media all and (max-width: 1222px) {
+  #fame {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  #fame .left-container {
+    align-items: center;
+  }
+  #fame .left-text {
+    border: none;
+  }
+  #glory .section{
+   display: block;
+  }
+  
+}
+@media all and (min-width: 768px) {
   #home .container-fluid {
     background-image: url("homebannermbl.jpg") !important;
   }
@@ -395,118 +300,22 @@ textarea {
     text-align: center;
   }
 
-  #bio .container-fluid,
-  #contact .container-fluid {
-    min-height: 70rem;
-    display: block;
-    /* background-color: red; */
+  #bio .bio-text .bio-content {
+    columns: 2;
+    gap: 2rem;
   }
-  #bio .container-fluid .bioimg {
+  #bio .bio-text h4 {
+    font-weight: 600;
+  }
+  #fame {
     display: flex;
-    justify-content: center;
+    flex-direction: row;
   }
-  #bio .container-fluid .bioimg img {
-    margin-left: 0;
-    margin-top: 30px;
+  #fame .stats h5,
+  #fame .stats span {
+    font-size: 0.9rem;
   }
-  #fame .container-fluid {
-    height: 232vh;
-  }
-  #fame .container-fluid .container {
-    display: grid;
-    grid-template-columns: repeat(1, 2fr);
-    gap: 15px;
-    grid-template-areas:
-      "box1"
-      "box1"
-      "box2"
-      "box2"
-      "box3"
-      "box3"
-      "box3"
-      "box3";
-  }
-  #fame .container-fluid .container .section1 {
-    grid-area: box1;
-    min-height: 17rem;
-    overflow-y: hidden;
-    /* background-color: red; */
-  }
-  #fame .container-fluid .container .section2 {
-    grid-area: box2;
-    min-height: 14rem;
-  }
-
-  #fame .container-fluid .container .section3 {
-    /* background-color: rgb(255, 0, 225); */
-    grid-area: box3;
-    display: grid;
-    grid-template-columns: repeat(2, 5fr);
-    grid-template-rows: repeat(6, 1fr);
-    gap: 10px;
-    margin-block: 15px;
-    margin-inline: 10px;
-  }
-  #fame .section2 video {
-    min-width: 17rem;
-  }
-  #contact .container-fluid {
-    min-height: 50rem;
-    display: block;
-    /* background-color: red; */
-  }
-  #contact .container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-areas:
-      "box1 box1"
-      "box1 box1"
-      "box1 box1"
-      "box2 box2"
-      "box2 box2"
-      "box2 box2"
-      "box3 box3";
-    gap: 20px;
-    place-items: center;
-  }
-  #contact .container .box1 {
-    min-width: 10rem;
-  }
-  #contact .container .box2 {
-    width: 20rem;
-  }
-  #contact .container .box2 .section {
-    overflow: hidden;
-  }
-  /* #contact input[type="text"],
-input[type="email"],
-textarea {
-  max-width: 23rem;
-} */
-  #contact .card {
-    display: flex;
-    max-width: 20rem;
-    align-items: center;
-    justify-content: center;
-    min-height: 19rem;
-  }
-  #contact .card .card-text {
-    width: 20rem;
-    height: 8rem;
-  }
-  #contact .container .box2 .section form {
-    /* background-color: red; */
-    padding-inline: 30px;
-    padding-right: 100px;
-    max-width: 22rem;
-  }
-  #contact marquee {
-    font-family: "Kaushan Script", cursive;
-    font-size: 2rem;
-    max-width: 25rem;
-    height: 4rem;
-    /* background-color: rgb(250, 210, 10); */
-    display: flex;
-    align-items: center;
+  #glory .section{
+    grid-template-columns: repeat(6,1fr);
   }
 }
