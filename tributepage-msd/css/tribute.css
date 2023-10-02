@@ -275,6 +275,9 @@ body {
   mix-blend-mode: multiply;
 }
 @media all and (max-width: 1222px) {
+  #home{
+    background-image: url("homebannermbl.jpg") !important;
+  }
   #fame {
     display: flex;
     flex-direction: column;
@@ -292,9 +295,6 @@ body {
   
 }
 @media all and (min-width: 768px) {
-  #home .container-fluid {
-    background-image: url("homebannermbl.jpg") !important;
-  }
 
   #home .home-text {
     text-align: center;
