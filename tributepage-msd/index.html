@@ -4,10 +4,13 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>A Tribute to MSD | RJ</title>
+    <title>Dhoni Forever: The Ultimate Tribute | RJX</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="stylesheet" href="css/tribute.css">
 </head>
@@ -16,7 +19,7 @@
     <!-- nav -->
     <nav class="navbar navbar-expand-lg bg-light fixed-top px-lg-5">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">MS Dhoni</a>
+            <a class="navbar-brand" href="#">MS Dhoni - The Cricketing Maestro</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -43,16 +46,24 @@
     <!-- home starts -->
 
     <div id="home">
-        <div class="home-text">
-            <h1>MS DHONI</h1>
-            <h4>What a <strong>MAN</strong>, What a <strong>LEADER</strong> </h4>
+        <div class="video-block">
+            <video src="/images/A_tribute_to_MS_Dhoni(720p).mp4" autoplay muted></video>
         </div>
-        <div><span></span></div>
+        <div class="text-overlay">
+            <h1>Celebrating the Cricketing Legacy of MS Dhoni</h1>
+            <h5>A tribute to one of cricket's greatest captains.</h5>
+            <h5>"Start Your Journey into the World of Captain Cool"</h5>
+            <a href="#bio" class="cta-button">Explore Now &nbsp; <i class="fa-solid fa-arrow-down"></i></a>
+            <h6>"Explore the Inspiring Journey of India's Cricketing Legend"</h6>
+            <h6>"Where Every Stump Counts and Every Six Echoes"</h6>
+            <h6>"Reliving the Magical Moments of MSD"</h6>
+        </div>
+
     </div>
     <!-- home ends -->
     <div class="main container">
-        <div id="bio" class="container p-3 d-flex justify-content-center align-items-center">
-
+        <div id="bio"
+            class="container-fluid col-11 container-fluid-lg mx-auto p-3 d-flex justify-content-center align-items-center">
             <div class="bio-text my-5 p-3 d-flex flex-column">
                 <div>
                     <h4 class="text-center">THE JOURNEY</h4>
@@ -445,54 +456,15 @@
                 <button onclick="myFunction()" id="myBtn" class="btn btn-outline-dark m-2">Read more..</button>
             </div>
         </div>
-        <div id="fame" class="container p-3 justify-content-center align-items-center my-5">
-            <div
-                class="left-container col-lg-4 col-md-12 col-sm-12 d-flex flex-column justify-content-center align-content-center">
-                <div class="left-text text-center">
-                    <h3 class="content-headers py-2">Stats</h3>
-                </div>
-                <div class="card my-3 card-1">
-                    <div class="card-img1">
-                        <img src="/images/card-image-removebg-preview.png" alt="ms dhoni" class="card-image">
-                    </div>
-                    <div>
-                        <table>
-                            <tbody>
-                                <tr>
-                                    <td><b> Born</b></td>
-                                    <td>Jul 07, 1981</td>
-                                </tr>
-                                <tr>
-                                    <td><b> Birth Place</b></td>
-                                    <td>Ranchi, Bihar (now Jharkhand)</td>
-                                </tr>
-                                <tr>
-                                    <td><b> Height</b></td>
-                                    <td>5 ft 11 in (180 cm)</td>
-                                </tr>
-                                <tr>
-                                    <td><b> Role</b></td>
-                                    <td>WK-Batsman</td>
-                                </tr>
-                                <tr>
-                                    <td><b> Batting Style</b></td>
-                                    <td>Right Handed Bat</td>
-                                </tr>
-                                <tr>
-                                    <td><b> Bowling Style</b></td>
-                                    <td>Right-arm medium</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
+        <div id="fame"
+            class="container-fluid col-11 p-3 flex-column justify-content-center align-items-center flex-wrap my-5">
+            <div class="glory-heading">
+                <h3 class="content-headers text-center">THE STATS</h3>
             </div>
-
-            <div
-                class="right-container col-lg-8 col-sm-12 p-3 d-flex justify-content-center align-items-center flex-wrap">
+            <div class="cards d-flex justify-content-center align-items-center flex-wrap">
                 <div class="card card-2 col-sm-12">
                     <div class="card-img">
-                        <img src="/images/fame/t20i-removebg-preview.png" alt="T20i Career" class="card-image">
+                        <img src="/images/fame/t20i-removebg-preview.png" alt="" class="card-image">
                     </div>
                     <div>
                         <table class='stats'>
@@ -542,7 +514,7 @@
                 </div>
                 <div class="card card-2 col-sm-12">
                     <div class="card-img">
-                        <img src="/images/fame/odi-removebg-preview.png" alt="ODI Career" class="card-image">
+                        <img src="/images/fame/odi-removebg-preview.png" alt="" class="card-image">
                     </div>
                     <div>
                         <table class='stats'>
@@ -592,7 +564,7 @@
                 </div>
                 <div class="card card-2 col-sm-12">
                     <div class="card-img">
-                        <img src="/images/fame/test-removebg-preview.png" alt="Test Career" class="card-image">
+                        <img src="/images/fame/test-removebg-preview.png" alt="" class="card-image">
                     </div>
                     <div>
                         <table class='stats'>
@@ -640,9 +612,9 @@
                     </div>
 
                 </div>
-                <div class="card card-2 col-sm-12 col-md-11">
+                <div class="card card-2">
                     <div class="card-img">
-                        <img src="/images/fame/ipl-removebg-preview.png" alt="IPL Career" class="card-image">
+                        <img src="/images/fame/ipl-removebg-preview.png" alt="" class="card-image">
                     </div>
                     <div>
                         <table class='stats'>
@@ -688,14 +660,19 @@
                             </tr>
                         </table>
                     </div>
-
                 </div>
             </div>
 
         </div>
-        <div id="glory" class="container d-flex flex-column align-content-center justify-content-center">
-            <div class="glory-heading">
+        <div id="glory"
+            class="container-fluid col-11 d-flex flex-column align-content-center justify-content-center mt-5">
+            <div class="glory-heading mt-5">
                 <h3 class="content-headers text-center">THE GLORY</h3>
+            </div>
+            <div class="text">
+                <h5>"Witness the Records and Triumphs of a Cricketing Legend"</h5>
+                <h5>"From Helicopter Shots to World Cup Wins, Relive the Glorious Moments"
+                </h5>
             </div>
             <div class="section d-grid p-2">
                 <div class="box box-1"><img src="images/trophies/t20 wc trophy.png" alt="">T20 WORLDCUP 2007
@@ -725,9 +702,183 @@
                     2023</div>
             </div>
         </div>
-
+        <div id="contact" class="container d-flex flex-column justify-content-center align-items-center">
+            <h2 class="content-headers">Contact Me</h2>
+            <form action="" class="d-flex flex-column justify-content-center align-items-center">
+                <div class="inform d-flex justify-conten-center align-items-center flex-wrap">
+                    <input type="text" name="name" placeholder="Enter Your Name">
+                    <input type="email" name="email" placeholder="Enter Your Mail" id="email">
+                </div>
+                <textarea name="desc" id="" cols="30" rows="4" placeholder="Your message"></textarea>
+                <button type="submit"><a href="#">Send&nbsp;<i class="fa-solid fa-paper-plane"></i></a></button>
+            </form>
+        </div>
     </div>
+    <div class="text-box">
+        <h6>""""Quote from MS Dhoni""""</h6>
+        <h5>"It's important to learn and not repeat the same mistakes. What's done is done."</h5>
+        <h5>"Winning isn't everything, but wanting to win is.
+        </h5>
+    </div>
+    <footer class="text-center text-lg-start bg-white text-muted">
+        <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom" id="icons">
+            <!-- Left -->
+            <div class="me-5 d-none d-lg-block">
+                <span>Get connected with us on social networks:</span>
+            </div>
+            <!-- Left -->
 
+            <!-- Right -->
+            <div>
+                <a href="https://www.facebook.com/raj.jaladurgam" class="me-4 link-secondary" target="_blank">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.twitter.com/rangajaladurgam" class="me-4 link-secondary" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://www.instagram.com/_iamr.in_" class="me-4 link-secondary" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="me-4 link-secondary">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/RangaJaladurgam" class="me-4 link-secondary" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+            <!-- Right -->
+        </section>
+        <!-- Section: Social media -->
+
+        <!-- Section: Links  -->
+        <section class="center">
+            <div class="container text-center text-md-start mt-5">
+                <!-- Grid row -->
+                <div class="row mt-3">
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                        <!-- Content -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            <i class="fas fa-gem me-3 text-secondary"></i>A TRIBUTE TO MSD
+                        </h6>
+                        <p>
+                            This is a Tribute to Mahendra Singh Dhoni.He is My Inspiration,
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            Links
+                        </h6>
+                        <p>
+                            <a href="#!" class="text-reset">BCCI</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">ICC</a>
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            Content
+                        </h6>
+                        <p>
+                            <a href="#home" class="text-reset">HOME</a>
+                        </p>
+                        <p>
+                            <a href="#bio" class="text-reset">BIO</a>
+                        </p>
+                        <p>
+                            <a href="#fame" class="text-reset">STATS</a>
+                        </p>
+                        <p>
+                            <a href="#glory" class="text-reset">GLORY</a>
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+
+                        <i class="fas fa-envelope me-3 text-secondary"></i>
+                        RangaJaladurgam7258@gmail.com
+                        </p>
+                        <p><i class="fas fa-phone me-3 text-secondary"></i> + 91 9652542804</p>
+                    </div>
+                    <!-- Grid column -->
+                </div>
+                <!-- Grid row -->
+            </div>
+        </section>
+        <!-- Section: Links  -->
+        <section class="">
+            <div class="row">
+                <div class="col-lg-2 col-md-12 mb-4 mb-md-0 images">
+                    <div class="bg-image hover-overlay ripple shadow-1-strong rounded" data-ripple-color="light">
+                        <img src="images/icc.png" class="w-100" />
+                        <a href="https://www.icc-cricket.com/">
+                            <div class="mask" style="background-color: rgba(0, 0, 0, 0.2);"></div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-12 mb-4 mb-md-0 images">
+                    <div class="bg-image hover-overlay ripple shadow-1-strong rounded" data-ripple-color="light">
+                        <img src="images/bcci.jpg" class="w-100" />
+                        <a href="#!">
+                            <div class="mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-12 mb-4 mb-md-0 images">
+                    <div class="bg-image hover-overlay ripple shadow-1-strong rounded" data-ripple-color="light">
+                        <img src="images/espncricinfo-logo-full.png" class="w-100" />
+                        <a href="#!">
+                            <div class="mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-12 mb-4 mb-md-0 images">
+                    <div class="bg-image hover-overlay ripple shadow-1-strong rounded" data-ripple-color="light">
+                        <img src="images/star.png" class="w-100" />
+                        <a href="#!">
+                            <div class="mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-12 mb-4 mb-md-0 images">
+                    <div class="bg-image hover-overlay ripple shadow-1-strong rounded" data-ripple-color="light">
+                        <img src="images/wirally-web-logo.png" class="w-100" />
+                        <a href="#!">
+                            <div class="mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-12 mb-4 mb-md-0 images">
+                    <div class="bg-image hover-overlay ripple shadow-1-strong rounded" data-ripple-color="light">
+                        <img src="images/csk-logo.jpg" class="w-100 csk" />
+                        <a href="#!">
+                            <div class="mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Copyright -->
+        <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.025);">
+            © 2023 Copyright:
+            <a class="text-reset fw-bold" href="">RangaJaladurgam</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
