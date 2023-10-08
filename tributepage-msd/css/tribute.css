@@ -19,50 +19,105 @@ body {
 .navbar {
   font-family: "AR One Sans", sans-serif;
   font-weight: 500;
-  background-color: transparent !important;
+  background-color: var(--secColor) !important;
   transition: all 0.3s ease-in-out;
   color: black;
 }
 .nav-active {
-  background-color:var(--secColor) !important;
+  background-color: var(--secColor) !important;
   box-shadow: 5px -1px 12px -5px grey;
 }
 #home {
   height: 100dvh;
-  /* background: red; */
-  background-image: url("homebanner.jpg");
-  background-color: white;
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  background: rgb(2, 0, 36) !important;
+  background: linear-gradient(
+    180deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(18, 8, 37, 1) 51%,
+    rgba(50, 0, 115, 1) 100%
+  ) !important;
+}
+#home .video-block {
+  min-width: 100%;
+  background: rgb(2, 0, 36) !important;
+  overflow: hidden;
+  position: relative;
+  display: flex;
   align-items: center;
+  -webkit-mask-image: linear-gradient(
+    180deg,
+    transparent 5%,
+    rgba(0, 0, 0, 1) 30%,
+    rgba(0, 0, 0, 1) 70%,
+    transparent 95%
+  );
+  mask-image: linear-gradient(
+    180deg,
+    transparent 5%,
+    rgba(0, 0, 0, 1) 30%,
+    rgba(0, 0, 0, 1) 70%,
+    transparent 95%
+  );
+}
+#home .video-block video {
+  width: 100%;
+  aspect-ratio: 16/11;
+  opacity: 30%;
+  object-fit: cover;
+}
+.text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  z-index: 1;
+}
+.text-overlay h1 {
+  font-size: 30px;
+  margin-bottom: 20px;
 }
 
-#home .home-text h3,
-#home .home-text h4 {
-  font-size: 45px;
-  color: rgb(0, 0, 0);
-  font-family: "Marcellus", serif;
-  border-radius: 0px 60px;
+.text-overlay h5 {
+  font-size: 18px;
 }
-#home .home-text h4 {
+.text-overlay h6 {
+  color: var(--secColor);
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background: transparent;
+  border: 1px dashed var(--secColor);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  margin: 20px;
+}
+.cta-button:hover,
+.cta-button:hover i {
+  background-color: var(--secColor);
+  color: var(--bgColor);
+}
+.text{
   text-align: center;
 }
-#home .home-text strong {
-  color: rgb(11, 67, 234);
+.text-box{
+  padding-block:1rem;
+  text-align: center;
+  background-color: var(--secColor);
+  color: var(--bgColor);
 }
-#home .home-text h1 {
-  color: rgb(11, 67, 234);
-  font-family: "Libre Baskerville", serif;
-  letter-spacing: 2px;
-  font-size: 65px;
+.red {
+  background-color: red !important;
 }
 /* home Ends */
 /* bio */
 #bio {
-  min-height: 100vh;
   background-color: var(--bgColor);
   flex-wrap: wrap;
 }
@@ -95,23 +150,14 @@ body {
 /* ---------------------------bio ends ----------------------*/
 /* fame starts */
 #fame {
-  min-height: 100vh;
+  min-height: 50vh;
   gap: 1rem;
-  display: block;
-}
-#fame .card {
-  max-width: 30rem;
-  background-color: white;
-  border: none;
-  background: rgb(5, 125, 192);
-  background: linear-gradient(
-    171deg,
-    rgb(244, 3, 128) 0%,
-    rgba(5, 125, 192, 1) 100%
-  );
+  display: flex;
 }
 #fame .card-2 {
-  max-width: 20rem;
+  flex-basis: 100%;
+  flex-grow: 1;
+  max-width: 25rem;
   background: rgb(5, 125, 192);
   background: linear-gradient(
     165deg,
@@ -123,7 +169,7 @@ body {
   transition: all 0.5s ease-in-out;
   /* border: 1px dashed black; */
 }
-#fame .card-2:hover{
+#fame .card-2:hover {
   transform: rotateY(360deg);
   transition: all 1s ease-in-out;
 }
@@ -161,14 +207,12 @@ body {
 }
 #fame .stats h5,
 #fame .stats span {
-  color: rgb(255, 254, 254);
-  font-size: 0.6rem;
+  color: rgb(255, 255, 255);
+  font-size: 17px;
 }
-
-#fame .right-container,
-#fame .left-text {
-  border: 1px dashed var(--secColor);
-  border-radius: 5px;
+#fame,
+#fame .left-text,
+#fame .cards {
   gap: 1rem;
 }
 .content-headers {
@@ -180,9 +224,10 @@ body {
 }
 
 #glory {
-  min-height: 100vh;
+  min-height: 50vh;
 }
 #glory .section {
+  display: block;
   gap: 1rem;
 }
 #glory .section .box {
@@ -249,57 +294,110 @@ body {
   );
 }
 #glory .box:hover {
-  background-color: red;
+  cursor: pointer;
   transform: scale(1.05);
 }
 /* fame ends */
-.footer .center {
+#contact {
+  min-height: 50vh;
+  margin-top: 5rem;
+}
+#contact form {
+  min-width: 80%;
+  padding: 1rem;
+  gap: 1rem;
+}
+#contact .inform {
+  width: 100%;
+  gap: 1rem;
+}
+#contact form input[type="text"],
+#contact input[type="email"] {
+  flex-basis: 49.25%;
+  flex-grow: 1;
+}
+
+#contact form input[type="text"],
+input[type="email"] {
+  width: 100%;
+  height: 3rem;
+  padding: 10px;
+  border: 1px dashed var(--secColor);
+  border-radius: 5px;
+  background: rgba(207, 27, 207, 0.168);
+  backdrop-filter: blur(10px);
+  color: white;
+}
+#contact ::placeholder {
+  color: var(--secColor);
+}
+#contact form button {
+  padding: 0.5rem 2rem;
+  font-size: 17px;
+}
+#contact form,
+textarea {
+  min-width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+}
+#contact button a {
+  text-decoration: none;
+  color: var(--secColor);
+}
+#contact button:hover {
+  background-color: var(--secColor);
+  color: var(--bgColor);
+}
+#contact button:hover a {
+  color: var(--bgColor);
+}
+#contact form textarea,
+button {
+  border: 1px dashed var(--secColor);
+  border-radius: 5px;
+  background: transparent;
+  backdrop-filter: blur(10px);
+  background: rgba(207, 27, 207, 0.168);
+}
+footer section,
+footer div {
+  background-color: var(--secColor) !important;
+}
+footer .center {
   display: flex;
-  /* background-color: red; */
   justify-content: end;
 }
-.footer section .row {
-  width: 99%;
-  /* background-color: red; */
+footer section .row {
+  width: 100%;
   display: flex;
   justify-content: center;
 }
-.footer section .images {
+footer section .images {
   width: 110px;
-  /* background-color: red; */
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.footer section .images .csk {
+footer section .images .csk {
   mix-blend-mode: multiply;
 }
+#icons i{
+  color: var(--bgColor);
+}
 @media all and (max-width: 1222px) {
-  #home{
-    background-image: url("homebannermbl.jpg") !important;
-  }
   #fame {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
   }
-  #fame .left-container {
-    align-items: center;
+  #fame .card-2 {
+    max-width: 100%;
   }
-  #fame .left-text {
-    border: none;
-  }
-  #glory .section{
-   display: block;
-  }
-  
 }
 @media all and (min-width: 768px) {
-
   #home .home-text {
     text-align: center;
   }
-
   #bio .bio-text .bio-content {
     columns: 2;
     gap: 2rem;
@@ -313,9 +411,17 @@ body {
   }
   #fame .stats h5,
   #fame .stats span {
-    font-size: 0.9rem;
+    font-size: 1.5rem;
   }
-  #glory .section{
-    grid-template-columns: repeat(6,1fr);
+  #glory .section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-columns: 100%;
+    grid-column-gap: 10px;
+  }
+}
+@media all and (min-width: 1068px) {
+  #glory .section {
+    grid-template-columns: repeat(6, 1fr);
   }
 }
