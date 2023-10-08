@@ -27,6 +27,9 @@ body {
   background-color: var(--secColor) !important;
   box-shadow: 5px -1px 12px -5px grey;
 }
+.extragap{
+  padding: 1rem;
+}
 #home {
   height: 100dvh;
   display: flex;
@@ -38,6 +41,9 @@ body {
     rgba(18, 8, 37, 1) 51%,
     rgba(50, 0, 115, 1) 100%
   ) !important;
+}
+.extra{
+  display: none;
 }
 #home .video-block {
   min-width: 100%;
@@ -109,8 +115,9 @@ body {
 .text-box{
   padding-block:1rem;
   text-align: center;
-  background-color: var(--secColor);
-  color: var(--bgColor);
+  border: 1px dashed var(--secColor);
+  border-radius:10px ;
+  color: var(--secColor);
 }
 .red {
   background-color: red !important;
@@ -158,6 +165,7 @@ body {
   flex-basis: 100%;
   flex-grow: 1;
   max-width: 25rem;
+  padding: 1rem;
   background: rgb(5, 125, 192);
   background: linear-gradient(
     165deg,
@@ -341,7 +349,7 @@ textarea {
   padding: 10px;
   border-radius: 5px;
 }
-#contact button a {
+#contact button a,#contact button i {
   text-decoration: none;
   color: var(--secColor);
 }
@@ -349,7 +357,7 @@ textarea {
   background-color: var(--secColor);
   color: var(--bgColor);
 }
-#contact button:hover a {
+#contact button:hover a,#contact button:hover i {
   color: var(--bgColor);
 }
 #contact form textarea,
@@ -384,6 +392,13 @@ footer section .images .csk {
 }
 #icons i{
   color: var(--bgColor);
+  padding:0.7rem;
+  border: 1px dashed var(--bgColor);
+  border-radius: 10px;
+}
+#icons i:hover {
+  background-color: var(--bgColor);
+  color: var(--secColor);
 }
 @media all and (max-width: 1222px) {
   #fame {
@@ -398,6 +413,9 @@ footer section .images .csk {
   #home .home-text {
     text-align: center;
   }
+  .extra{
+    display: block;
+  }
   #bio .bio-text .bio-content {
     columns: 2;
     gap: 2rem;
@@ -409,9 +427,13 @@ footer section .images .csk {
     display: flex;
     flex-direction: row;
   }
+  #fame .card-img{
+    text-align: center;
+    padding: 10px;
+  }
   #fame .stats h5,
   #fame .stats span {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
   #glory .section {
     display: grid;
